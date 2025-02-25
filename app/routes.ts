@@ -8,8 +8,9 @@ import {
 export default [
   index("routes/home.tsx"),
   route("sobre", "routes/about.tsx"),
+
   ...prefix("pais", [
-    index("routes/country.tsx"),
-    route("pais/:countryName", "routes/countries.tsx"),
+    index("routes/countries.tsx"),
+    route(":countryName", "routes/country.tsx"),
   ]),
 ] satisfies RouteConfig;
